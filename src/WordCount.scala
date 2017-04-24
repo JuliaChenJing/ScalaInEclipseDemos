@@ -3,9 +3,11 @@ import java.io._
 
 import scala.collection.immutable.ListMap;
 
-object WordCount {
-  def main(args: Array[String]) {
-    val output = scala.io.Source.fromFile("./wordCountInput.txt","ISO-8859-1")
+object WordCount //class name
+{
+  def main(args: Array[String]) //main method
+  {
+    val output = scala.io.Source.fromFile("./wordCountInput.txt","ISO-8859-1")//input file loaded
 
       .getLines
       .flatMap(_.split("\\W+"))
@@ -26,6 +28,5 @@ object WordCount {
     writer.close()
 
   }
-
 
 }
